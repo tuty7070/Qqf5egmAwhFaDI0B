@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Contact</title>
+  </head>
+  <body>
+    <script>
+      const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Arthur Oliveira
+TEL;TYPE=CELL:+5511988693553
+EMAIL:arthur.poliveira70@gmail.com
+SITE:https://www.youtube.com/@Spaghettifigures
+END:VCARD`;
+      const blob = new Blob([vcard], { type: "text/vcard" });
+      const url = URL.createObjectURL(blob);
+      window.location.href = url;
+    </script>
+  </body>
+</html>
