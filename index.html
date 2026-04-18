@@ -13,10 +13,8 @@ TEL;TYPE=CELL:+5511988693553
 EMAIL:arthur.poliveira70@gmail.com
 URL:https://arthur-portifolio.webflow.io
 END:VCARD`;
-      const blob = new Blob([vcard], { type: "text/vcard" });
-      const url = URL.createObjectURL(blob);
-      window.location.href = url;
+     const encoded = encodeURIComponent(vcard);
+      window.location.href = "data:text/vcard;charset=utf-8," + encoded;
     </script>
   </body>
 </html>
-
